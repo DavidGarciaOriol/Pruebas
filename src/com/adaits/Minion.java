@@ -18,6 +18,24 @@ public class Minion {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Minion minion = (Minion) o;
+
+        if (crimenes != minion.crimenes) return false;
+        return nombre != null ? nombre.equals(minion.nombre) : minion.nombre == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nombre != null ? nombre.hashCode() : 0;
+        result = 31 * result + crimenes;
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Minion{" +
                 "nombre='" + nombre + '\'' +
