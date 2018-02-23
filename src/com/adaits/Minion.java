@@ -1,9 +1,16 @@
 package com.adaits;
 
+import java.util.ArrayList;
+
 public class Minion {
 
     private String nombre;
     private int crimenes;
+    private String palabra;
+    private int eyes;
+    private boolean hasGlasses;
+    private ArrayList<String>skills;
+    private Boss boss;
 
     //Crear propiedad para gestionar palabra favorita
     //Crear propiedad para los numeros de ojos
@@ -15,6 +22,11 @@ public class Minion {
     public Minion(String nombre, int crimenes) {
         this.nombre = nombre;
         this.crimenes = crimenes;
+    }
+
+    public Minion(int eyes, boolean hasGlasses) {
+        this.eyes = eyes;
+        this.hasGlasses = hasGlasses;
     }
 
     @Override
@@ -60,6 +72,8 @@ public class Minion {
 
         return esMayor;
     }
+
+
 
     //Crear una funcion que obtengan todos los minions con mas de un ojo y sin gafas
 
